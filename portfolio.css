@@ -1654,125 +1654,6 @@ body.body--ats .fn-section-4.overflow-none + .w-embed-youtubevideo {
   }
 }
 
-/* Case studies — Intro / My Role: mobile-first layout (touch spacing, single column, role card below intro) */
-@media (max-width: 768px) {
-  /* Assemb3D: sand band uses full content width — no horizontal breakout on narrow viewports */
-  body.body--assemb3d .hero-heading-left-2 > .section {
-    left: auto;
-    transform: none;
-    width: 100%;
-    max-width: 100%;
-    padding: 1.1rem max(0.75rem, env(safe-area-inset-left)) 1.3rem max(0.75rem, env(safe-area-inset-right));
-    border-radius: 0 0 var(--radius-md) var(--radius-md);
-  }
-
-  body.body--assemb3d .hero-heading-left-2 > .section > .fn-container-grid-2 {
-    gap: 1.2rem;
-  }
-
-  body.body--assemb3d .hero-heading-left-2 > .section > .fn-container-grid-2 > .fn-column-2:last-child {
-    margin-top: 0.15rem;
-    padding-top: 1.1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  body.body--assemb3d .hero-heading-left-2 > .section .features-metrics {
-    max-width: none;
-    width: 100%;
-  }
-
-  body.body--assemb3d .hero-heading-left-2 > .section .fn-container-grid-2 .heading-5 {
-    font-size: clamp(1.2rem, 4.5vw, 1.45rem);
-  }
-
-  body.body--assemb3d .hero-heading-left-2 > .section .fn-container-grid-2 .paragraph {
-    font-size: 1.02rem;
-    line-height: 1.65;
-  }
-
-  /* ATS: match sand intro rhythm; reset 2-col grid placement when stacked */
-  body.body--ats .hero-heading-left-2 > .section {
-    padding: 1.1rem max(0.75rem, env(safe-area-inset-left)) 1.3rem max(0.75rem, env(safe-area-inset-right));
-    border-radius: 0 0 var(--radius-md) var(--radius-md);
-    box-sizing: border-box;
-  }
-
-  body.body--ats .hero-heading-left-2 > .section > .fn-container-grid-2 {
-    gap: 1.2rem !important;
-  }
-
-  body.body--ats .hero-heading-left-2 > .section > .fn-container-grid-2 > .fn-column-2,
-  body.body--ats .hero-heading-left-2 > .section > .fn-container-grid-2 > .fn-column-2:not(#w-node-_791556f6-e81e-e78f-72ba-568631932520-88ff353b) {
-    grid-column: 1 / -1 !important;
-  }
-
-  body.body--ats .hero-heading-left-2 > .section > .fn-container-grid-2 > .fn-column-2:not(#w-node-_791556f6-e81e-e78f-72ba-568631932520-88ff353b) {
-    margin-top: 0.15rem;
-    padding-top: 1.1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  body.body--ats .section > .fn-container-grid-2 .heading-5 {
-    font-size: clamp(1.2rem, 4.5vw, 1.45rem);
-  }
-
-  body.body--ats .section > .fn-container-grid-2 .paragraph {
-    font-size: 1.02rem;
-    line-height: 1.65;
-  }
-
-  body.body--ats .hero-heading-left-2 > .section .features-metrics {
-    max-width: none;
-    width: 100%;
-    margin-top: 0 !important;
-  }
-
-  /* Das Lot: intro block stacks with clear separation */
-  body.body--das_lot .site-main > .section {
-    padding: 1.1rem max(0.75rem, env(safe-area-inset-left)) 1.3rem max(0.75rem, env(safe-area-inset-right));
-    border-radius: 0 0 var(--radius-md) var(--radius-md);
-    box-sizing: border-box;
-  }
-
-  body.body--das_lot .section > .fn-container-grid-2 {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-
-  body.body--das_lot .section > .fn-container-grid-2 > .fn-column-2 + .fn-column-2 {
-    margin-top: 0.15rem;
-    padding-top: 1.1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  body.body--das_lot .section > .fn-container-grid-2 .paragraph {
-    max-width: 100%;
-    font-size: 1.02rem;
-    line-height: 1.65;
-  }
-
-  body.body--das_lot .section > .fn-container-grid-2 .heading-5 {
-    font-size: clamp(1.2rem, 4.5vw, 1.45rem);
-  }
-
-  /* Role metrics strip: full width, comfortable tap spacing inside intro */
-  body.body--assemb3d .hero-heading-left-2 > .section .features-wrapper,
-  body.body--ats .hero-heading-left-2 > .section .features-wrapper,
-  body.body--das_lot .section .features-wrapper {
-    width: 100%;
-    justify-content: space-between;
-    gap: 0.5rem;
-  }
-
-  body.body--assemb3d .hero-heading-left-2 > .section .features-block,
-  body.body--ats .hero-heading-left-2 > .section .features-block,
-  body.body--das_lot .section .features-block {
-    flex: 1 1 0;
-    min-width: 0;
-    padding: 0.5rem 0.35rem;
-  }
-}
-
 /* ATS image safety: prevent overlap/sizing issues */
 body.body--ats .site-main img {
   display: block;
@@ -2045,6 +1926,170 @@ body.body--das_lot .fn-section-4.overflow-none {
 body.body--das_lot .fn-section-4.overflow-none + .hero-heading-left-5 {
   margin-top: 0 !important;
   padding-top: 0 !important;
+}
+
+/* —— Case studies: Intro + My Role — mobile card layout (≤768px) —— */
+@media (max-width: 768px) {
+  /* Sand band: full main width, safe area, rounded bottom */
+  body.body--assemb3d .hero-heading-left-2 > .section {
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1rem max(0.75rem, env(safe-area-inset-left)) 1.2rem
+      max(0.75rem, env(safe-area-inset-right));
+    border-radius: 0 0 18px 18px;
+  }
+
+  body.body--ats .hero-heading-left-2 > .section {
+    padding: 1rem max(0.75rem, env(safe-area-inset-left)) 1.2rem
+      max(0.75rem, env(safe-area-inset-right));
+    background: linear-gradient(180deg, #f6f5f2 0%, #efece5 100%);
+    border-radius: 0 0 18px 18px;
+    border-top: 1px solid rgba(0, 0, 0, 0.72);
+    box-sizing: border-box;
+  }
+
+  body.body--das_lot main.site-main > div.section:first-of-type {
+    padding: 1rem max(0.75rem, env(safe-area-inset-left)) 1.2rem
+      max(0.75rem, env(safe-area-inset-right));
+    background: linear-gradient(180deg, #f6f5f2 0%, #efece5 100%);
+    border-radius: 0 0 18px 18px;
+    border-top: 1px solid rgba(0, 0, 0, 0.72);
+    box-sizing: border-box;
+  }
+
+  body.body--ats .hero-heading-left-2 > .section > .fn-container-grid-2,
+  body.body--assemb3d .hero-heading-left-2 > .section > .fn-container-grid-2,
+  body.body--das_lot main.site-main > div.section > .fn-container-grid-2 {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.85rem !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Intro — light “sheet” card */
+  body.body--ats .hero-heading-left-2 > .section .fn-container-grid-2 > .fn-column-2:nth-child(1),
+  body.body--assemb3d .hero-heading-left-2 > .section .fn-container-grid-2 > .fn-column-2:nth-child(1),
+  body.body--das_lot main.site-main > div.section .fn-container-grid-2 > .fn-column-2:nth-child(1) {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1rem 1.05rem 1.1rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-left: 4px solid #1e3a5f;
+  }
+
+  body.body--ats .hero-heading-left-2 > .section .fn-container-grid-2 > .fn-column-2:nth-child(1) .heading-5,
+  body.body--assemb3d .hero-heading-left-2 > .section .fn-container-grid-2 > .fn-column-2:nth-child(1) .heading-5,
+  body.body--das_lot main.site-main > div.section .fn-container-grid-2 > .fn-column-2:nth-child(1) .heading-5 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #5c5c5c;
+    margin: 0 0 0.5rem;
+  }
+
+  body.body--ats .hero-heading-left-2 > .section .fn-container-grid-2 > .fn-column-2:nth-child(1) .paragraph,
+  body.body--assemb3d .hero-heading-left-2 > .section .fn-container-grid-2 > .fn-column-2:nth-child(1) .paragraph,
+  body.body--das_lot main.site-main > div.section .fn-container-grid-2 > .fn-column-2:nth-child(1) .paragraph {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: #222;
+    max-width: none !important;
+  }
+
+  /* My Role — contrasting “chips” card */
+  body.body--ats .hero-heading-left-2 > .section .fn-container-grid-2 > .fn-column-2:nth-child(2),
+  body.body--assemb3d .hero-heading-left-2 > .section .fn-container-grid-2 > .fn-column-2:nth-child(2),
+  body.body--das_lot main.site-main > div.section .fn-container-grid-2 > .fn-column-2:nth-child(2) {
+    background: linear-gradient(160deg, #eef0f3 0%, #e4e6ea 100%);
+    border-radius: 14px;
+    padding: 1rem 1.05rem 1.1rem;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  }
+
+  body.body--ats .hero-heading-left-2 > .section .fn-container-grid-2 > .fn-column-2:nth-child(2) .heading-5,
+  body.body--assemb3d .hero-heading-left-2 > .section .fn-container-grid-2 > .fn-column-2:nth-child(2) .heading-5,
+  body.body--das_lot main.site-main > div.section .fn-container-grid-2 > .fn-column-2:nth-child(2) .heading-5 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    margin: 0 0 0.65rem;
+  }
+
+  body.body--ats .hero-heading-left-2 > .section .features-metrics,
+  body.body--assemb3d .hero-heading-left-2 > .section .features-metrics,
+  body.body--das_lot main.site-main > div.section .features-metrics {
+    margin-top: 0 !important;
+    max-width: none !important;
+    width: 100%;
+    background: transparent !important;
+  }
+
+  body.body--ats .hero-heading-left-2 > .section .features-metrics .container-6,
+  body.body--assemb3d .hero-heading-left-2 > .section .features-metrics .container-6,
+  body.body--das_lot main.site-main > div.section .features-metrics .container-6 {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  body.body--ats .hero-heading-left-2 > .section .features-metrics .features-wrapper,
+  body.body--assemb3d .hero-heading-left-2 > .section .features-metrics .features-wrapper,
+  body.body--das_lot main.site-main > div.section .features-metrics .features-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0.45rem !important;
+    align-items: stretch;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  body.body--ats .hero-heading-left-2 > .section .features-metrics .features-block,
+  body.body--assemb3d .hero-heading-left-2 > .section .features-metrics .features-block,
+  body.body--das_lot main.site-main > div.section .features-metrics .features-block {
+    background: #ffffff !important;
+    border-radius: 0.65rem;
+    padding: 0.6rem 0.35rem 0.5rem !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    min-width: 0;
+  }
+
+  body.body--ats .hero-heading-left-2 > .section .features-metrics .features-title,
+  body.body--assemb3d .hero-heading-left-2 > .section .features-metrics .features-title,
+  body.body--das_lot main.site-main > div.section .features-metrics .features-title {
+    color: #111 !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    line-height: 1.25;
+  }
+
+  body.body--ats .hero-heading-left-2 > .section .features-metrics .text-block-3,
+  body.body--ats .hero-heading-left-2 > .section .features-metrics .text-block-4,
+  body.body--ats .hero-heading-left-2 > .section .features-metrics .text-block-5,
+  body.body--assemb3d .hero-heading-left-2 > .section .features-metrics .text-block-3,
+  body.body--assemb3d .hero-heading-left-2 > .section .features-metrics .text-block-4,
+  body.body--assemb3d .hero-heading-left-2 > .section .features-metrics .text-block-5,
+  body.body--das_lot main.site-main > div.section .features-metrics .text-block-3,
+  body.body--das_lot main.site-main > div.section .features-metrics .text-block-4,
+  body.body--das_lot main.site-main > div.section .features-metrics .text-block-5 {
+    color: #666 !important;
+    font-size: 0.65rem !important;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-top: 0.2rem;
+  }
 }
 
 /* Mobile entry page: styles live in mobile.css (no Webflow bundle) */
