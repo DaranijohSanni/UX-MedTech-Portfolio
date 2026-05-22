@@ -1,0 +1,84 @@
+/**
+ * Desktop-only notice (mobile.html). No site navigation — message only.
+ */
+:root {
+  --dn-bg: #f7f4ef;
+  --dn-text: #1a1a1a;
+  --dn-muted: #5c5c5c;
+  --dn-border: rgba(0, 0, 0, 0.1);
+  --dn-accent: #1e3a5f;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  color-scheme: light;
+}
+
+body.desktop-notice {
+  margin: 0;
+  min-height: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: max(1.5rem, env(safe-area-inset-top)) max(1.25rem, env(safe-area-inset-right))
+    max(1.5rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left));
+  background: linear-gradient(165deg, #faf8f5 0%, var(--dn-bg) 45%, #ebe6de 100%);
+  color: var(--dn-text);
+  font-family: "Sora", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.desktop-notice__panel {
+  width: 100%;
+  max-width: 22rem;
+  padding: 2rem 1.5rem 1.75rem;
+  background: #ffffff;
+  border: 1px solid var(--dn-border);
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+}
+
+.desktop-notice__title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.15rem, 4.5vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.desktop-notice__lead {
+  margin: 0 0 1rem;
+  font-size: 0.9375rem;
+  color: var(--dn-muted);
+  line-height: 1.55;
+}
+
+.desktop-notice__badge {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dn-accent);
+  background: rgba(30, 58, 95, 0.08);
+  border-radius: 6px;
+}
+
+.desktop-notice__name {
+  margin: 0 0 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--dn-muted);
+  letter-spacing: 0.02em;
+}
