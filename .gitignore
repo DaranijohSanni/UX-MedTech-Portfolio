@@ -1,0 +1,16 @@
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local scratch (optional backup; remove from repo if you do not need it)
+# home-copy.html
+
+# Archives (regenerate anytime)
+*.zip

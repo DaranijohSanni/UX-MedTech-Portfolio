@@ -1,0 +1,196 @@
+/**
+ * Mobile layouts — portfolio & case studies on narrow viewports.
+ * Used on mobile.html (body.m-page) and desktop pages (body.p-page @media).
+ */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 768px) {
+  body.p-page,
+  body.m-page {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  body.p-page .p-nav,
+  body.m-page .p-nav {
+    width: calc(100% - 1rem);
+    max-width: none;
+    top: max(0.5rem, env(safe-area-inset-top));
+  }
+
+  body.p-page .p-nav__link,
+  body.m-page .p-nav__link {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.65rem;
+  }
+
+  body.p-page .p-nav__link:not(.p-nav__link--cta),
+  body.m-page .p-nav__link:not(.p-nav__link--cta) {
+    display: inline-flex;
+  }
+
+  body.p-page .p-main,
+  body.p-page .cs-main,
+  body.m-page .p-main,
+  body.m-page .cs-main {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  body.p-page .p-hero,
+  body.m-page .p-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: clamp(2rem, 6vw, 3rem);
+    grid-template-columns: 1fr;
+  }
+
+  body.p-page .p-hero__photo,
+  body.m-page .p-hero__photo {
+    order: -1;
+    max-width: 11rem;
+    margin: 0 auto;
+  }
+
+  body.p-page .p-hero__content,
+  body.m-page .p-hero__content {
+    max-width: none;
+  }
+
+  body.p-page .p-card,
+  body.p-page .p-work__list li:nth-child(even) .p-card,
+  body.m-page .p-card,
+  body.m-page .p-work__list li:nth-child(even) .p-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  body.p-page .p-work__list li:nth-child(even) .p-card__body,
+  body.m-page .p-work__list li:nth-child(even) .p-card__body {
+    order: 0;
+  }
+
+  body.p-page .p-card__media,
+  body.m-page .p-card__media {
+    aspect-ratio: 16 / 10;
+  }
+
+  body.p-page .p-card__desc,
+  body.m-page .p-card__desc {
+    max-width: none;
+  }
+
+  body.p-page .p-card:hover,
+  body.m-page .p-card:hover {
+    transform: none;
+  }
+
+  body.p-page .p-card:active,
+  body.m-page .p-card:active {
+    opacity: 0.92;
+  }
+
+  body.p-page .p-about,
+  body.m-page .p-about {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  body.p-page .p-about__list li,
+  body.m-page .p-about__list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  body.p-page .p-about__list strong,
+  body.m-page .p-about__list strong {
+    min-width: 0;
+  }
+
+  body.p-page .p-contact__actions,
+  body.m-page .p-contact__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  body.p-page .p-contact__btn,
+  body.m-page .p-contact__btn {
+    min-height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  body.p-page .cs-row,
+  body.p-page .cs-row--reverse,
+  body.m-page .cs-row,
+  body.m-page .cs-row--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  body.p-page .cs-row--reverse .cs-row__media,
+  body.m-page .cs-row--reverse .cs-row__media {
+    order: 0;
+  }
+
+  body.p-page .cs-hero__back,
+  body.p-page .cs-next,
+  body.m-page .cs-hero__back,
+  body.m-page .cs-next {
+    min-height: 2.75rem;
+  }
+
+  body.p-page .cs-meta,
+  body.m-page .cs-meta {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  body.p-page .cs-step-grid,
+  body.m-page .cs-step-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.p-page .cs-gallery,
+  body.m-page .cs-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  body.p-page .cs-video iframe,
+  body.m-page .cs-video iframe {
+    min-height: 12rem;
+  }
+
+  body.p-page .p-footer,
+  body.m-page .p-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+.m-footer__desktop {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--p-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.m-footer__desktop:hover {
+  color: var(--p-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @media (max-width: 768px) {
+    body.p-page .p-card:active,
+    body.m-page .p-card:active {
+      opacity: 1;
+    }
+  }
+}
