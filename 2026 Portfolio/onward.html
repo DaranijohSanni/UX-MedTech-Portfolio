@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="p-page">
+<head>
+  <meta charset="utf-8"/>
+  <title>OnWard, Daranijoh Sanni</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <meta name="theme-color" content="#fbf9f5"/>
+  <meta name="description" content="OnWard, UI review and journey improvements for a medical learning app, based on six user tests."/>
+  <script src="mobile-redirect.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="portfolio-page.css" rel="stylesheet"/>
+  <link href="case-study.css" rel="stylesheet"/>
+  <link href="mobile.css" rel="stylesheet"/>
+  <link href="assets/site-icon.png" rel="icon" type="image/png"/>
+  <link href="assets/site-icon.png" rel="apple-touch-icon"/>
+</head>
+<body class="p-page">
+
+  <header class="p-nav" role="navigation" aria-label="Site">
+    <a class="p-nav__brand" href="index.html">Daranijoh Sanni</a>
+    <nav class="p-nav__links">
+      <a class="p-nav__link" href="portfolio.html#work">Work</a>
+      <a class="p-nav__link" href="portfolio.html#about">About</a>
+      <a class="p-nav__link p-nav__link--cta" href="portfolio.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="cs-main">
+
+    <!-- Hero -->
+    <section class="cs-hero">
+      <div class="cs-hero__top">
+        <a class="cs-hero__back" href="portfolio.html#work">Back to work</a>
+        <span class="cs-eyebrow">Case study · UX Review · MedTech</span>
+      </div>
+      <h1 class="cs-hero__title">OnWard, UI Review &amp; Improvements</h1>
+      <p class="cs-hero__lead">
+        OnWard is an AI-supported clinical learning app for medical students, log a case, receive
+        structured feedback, and revise weak areas. After running six user tests, I redesigned the
+        end-to-end journey to remove friction at sign-up, build trust before payment, and turn
+        wait time into useful study time.
+      </p>
+      <div class="cs-hero__image">
+        <img src="assets/onward/onward-head.png" alt="OnWard UI Review & Improvements, hero with app screens" loading="eager" decoding="async"/>
+      </div>
+
+      <div class="cs-meta" aria-label="Project metadata">
+        <div class="cs-meta__chip">
+          <span class="cs-meta__label">Year</span>
+          <span class="cs-meta__value">2025</span>
+        </div>
+        <div class="cs-meta__chip">
+          <span class="cs-meta__label">Role</span>
+          <span class="cs-meta__value">UX Review</span>
+        </div>
+        <div class="cs-meta__chip">
+          <span class="cs-meta__label">Position</span>
+          <span class="cs-meta__value">Lead</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Problem (User Testing) -->
+    <section class="cs-section cs-row">
+      <div class="cs-row__media">
+        <img src="assets/onward/onward-03.png" alt="Participant using the OnWard app on a smartphone during user testing" loading="lazy" decoding="async"/>
+      </div>
+      <div class="cs-row__body">
+        <p class="cs-eyebrow">User Testing</p>
+        <h2 class="cs-h2">Of six user tests conducted, the recurring problems were:</h2>
+        <ul class="cs-bullets">
+          <li><strong>Pay before use</strong>; friction before any value was experienced.</li>
+          <li><strong>Information overload</strong> during the sign-up process.</li>
+          <li><strong>Lack of confirmation awareness</strong>; users couldn’t tell when an answer was “in.”</li>
+          <li><strong>Dislike of wait times</strong> when users filled out a case.</li>
+          <li><strong>Layout confusion</strong> across screens.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- How Might We -->
+    <section class="cs-section">
+      <p class="cs-eyebrow">The Question</p>
+      <h2 class="cs-h2 cs-center" style="margin-left:auto;margin-right:auto;text-align:center;">How might we…</h2>
+      <div class="cs-mantra" style="margin-top: 1.25rem;">
+        <p class="cs-mantra__line">create an easy, intuitive and engaging user experience</p>
+        <p class="cs-mantra__line">that still guides users from sign-up to case completion?</p>
+      </div>
+    </section>
+
+    <!-- Redefining the journey -->
+    <section class="cs-section cs-center">
+      <p class="cs-eyebrow">Solution</p>
+      <h2 class="cs-h2">Redefining our user journey.</h2>
+      <p class="cs-p" style="max-width: 38rem; margin-left:auto; margin-right:auto;">
+        Each step below pairs a user-tested problem with a small, opinionated UI change, built
+        around trust, clarity, and momentum.
+      </p>
+    </section>
+
+    <!-- Sign-Up Process -->
+    <section class="cs-section cs-row">
+      <div class="cs-row__media">
+        <img src="assets/onward/onward-06.png" alt="OnWard sign-up screens, institution email entry and password creation" loading="lazy" decoding="async"/>
+      </div>
+      <div class="cs-row__body">
+        <p class="cs-eyebrow">User Journey · Sign-Up</p>
+        <h2 class="cs-h2">Signing up via institution email.</h2>
+        <ul class="cs-bullets">
+          <li>Resolves user information overload and means a quicker sign-up.</li>
+          <li>Feels more immersive to the college experience.</li>
+          <li>Legitimises sign-ups, keeping everything within the university’s network.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- First Sign-In -->
+    <section class="cs-section cs-row cs-row--reverse">
+      <div class="cs-row__media">
+        <img src="assets/onward/onward-07.png" alt="OnWard first sign-in, experience level selection and tool-tip guided introduction" loading="lazy" decoding="async"/>
+      </div>
+      <div class="cs-row__body">
+        <p class="cs-eyebrow">User Journey · First Sign-In</p>
+        <h2 class="cs-h2">Guiding the user through the functions.</h2>
+        <p class="cs-p">
+          A tool-tip-led introduction tailored to each user’s experience level, so the app meets
+          people where they are:
+        </p>
+        <ul class="cs-bullets">
+          <li><strong>Never used before</strong>; full tutorial.</li>
+          <li><strong>A little bit here and there</strong>; key functions only.</li>
+          <li><strong>I’m back!</strong>; straight into full use.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Logging a Case -->
+    <section class="cs-section cs-row">
+      <div class="cs-row__media">
+        <img src="assets/onward/onward-08.png" alt="OnWard case logging, Heart Failure question with user answer and Continue confirmation" loading="lazy" decoding="async"/>
+      </div>
+      <div class="cs-row__body">
+        <p class="cs-eyebrow">User Journey · Logging a Case</p>
+        <h2 class="cs-h2">Adding confirmation buttons &amp; haptics.</h2>
+        <ul class="cs-bullets">
+          <li>Users decide when their answer is fully entered, instead of the app guessing.</li>
+          <li>If the user presses <strong>Skip</strong>, the topic is automatically added to the
+            <em>Areas To Improve</em> section, turning a skip into useful signal.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Results: filling wait times -->
+    <section class="cs-section cs-row cs-row--reverse">
+      <div class="cs-row__media">
+        <img src="assets/onward/onward-09.png" alt="OnWard wait state, AI scoring modal with Flash Quiz and Review options while you wait" loading="lazy" decoding="async"/>
+      </div>
+      <div class="cs-row__body">
+        <p class="cs-eyebrow">User Journey · Results</p>
+        <h2 class="cs-h2">Filling wait times with options to revise.</h2>
+        <ul class="cs-bullets">
+          <li>The user no longer has to wait patiently, the time becomes <em>further learning</em>.</li>
+          <li>Increases app use time, while reinforcing knowledge.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Payment -->
+    <section class="cs-section cs-row">
+      <div class="cs-row__media">
+        <img src="assets/onward/onward-10.png" alt="OnWard subscription screen, annual and monthly plans with launch discount code" loading="lazy" decoding="async"/>
+      </div>
+      <div class="cs-row__body">
+        <p class="cs-eyebrow">User Journey · Payment</p>
+        <h2 class="cs-h2">Payment appears after the user has familiarised themselves.</h2>
+        <ul class="cs-bullets">
+          <li>Leverages the <strong>sunk cost fallacy</strong> in a healthy way, value is felt
+            before it’s asked for.</li>
+          <li>The user gets a chance to try the app and build trust and understanding first.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Flash Quiz -->
+    <section class="cs-section cs-row cs-row--reverse">
+      <div class="cs-row__media">
+        <img src="assets/onward/onward-11.png" alt="OnWard Flash Quiz, answer input and scored feedback with Try Again and Next Question" loading="lazy" decoding="async"/>
+      </div>
+      <div class="cs-row__body">
+        <p class="cs-eyebrow">User Journey · Flash Quiz</p>
+        <h2 class="cs-h2">Turn the wait into a flash quiz.</h2>
+        <p class="cs-p">
+          A short, scored quiz fills the wait state, users can <em>Try Again</em> or move to the
+          <em>Next Question</em>. It increases app use time and converts dead time into spaced
+          revision.
+        </p>
+      </div>
+    </section>
+
+    <!-- Areas To Improve -->
+    <section class="cs-section cs-row">
+      <div class="cs-row__media">
+        <img src="assets/onward/onward-12.png" alt="OnWard Case Review, performance breakdown and Areas To Improve for Hepatobiliary and Pneumonia" loading="lazy" decoding="async"/>
+      </div>
+      <div class="cs-row__body">
+        <p class="cs-eyebrow">User Journey · Results</p>
+        <h2 class="cs-h2">Areas to Improve / Review.</h2>
+        <ul class="cs-bullets">
+          <li>Reinforces learning by surfacing weak topics directly.</li>
+          <li>Creates a more personalised user experience.</li>
+          <li>Lets the user act on the statistics and data about their performance, not just read
+            them.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Outcome -->
+    <section class="cs-section cs-center">
+      <p class="cs-eyebrow">Outcome</p>
+      <h2 class="cs-h2">A friendlier, trust-first journey.</h2>
+      <p class="cs-p" style="max-width: 38rem; margin-left:auto; margin-right:auto;">
+        Each problem from user testing was met with a targeted UI change, institution sign-up,
+        guided onboarding, explicit confirmations, useful wait states, delayed payment, flash
+        quizzes, and a personalised review section. The result is a journey that earns the
+        student’s time before asking for their attention or money.
+      </p>
+    </section>
+
+    <!-- Up next -->
+    <a class="cs-next" href="ats.html" aria-label="Up next: ATS Nightlife Triage">
+      <div>
+        <p class="cs-next__eyebrow">Up next</p>
+        <h2 class="cs-next__title">ATS, Nightlife Triage</h2>
+      </div>
+      <span class="cs-next__cta">View case</span>
+    </a>
+
+    <footer class="p-footer">
+      <span>© Daranijoh Sanni · Dublin</span>
+      <a class="p-nav__link" href="portfolio.html#work">Back to work</a>
+    </footer>
+
+  </main>
+
+</body>
+</html>
