@@ -175,6 +175,31 @@
   color: var(--cs-text);
 }
 
+/* Stats strip: same chips as cs-meta, value above label */
+.cs-stats {
+  margin-top: 0;
+}
+
+.cs-stats .cs-meta__value {
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  margin: 0 0 0.4rem;
+}
+
+.cs-stats .cs-meta__value.cs-stats__quote {
+  font-size: clamp(0.92rem, 1.6vw, 1.1rem);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.cs-stats .cs-meta__label {
+  text-transform: none;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
 /* Two-column row: image | text  (alternating sides) */
 .cs-row {
   display: grid;
@@ -193,6 +218,14 @@
   overflow: hidden;
   background: var(--cs-soft);
   border: 1px solid var(--cs-border);
+}
+
+.cs-row__media--plain {
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
 }
 
 .cs-row__media img {
@@ -515,6 +548,10 @@
 
   .cs-meta {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cs-stats {
+    grid-template-columns: 1fr;
   }
 
   .cs-step-grid {
